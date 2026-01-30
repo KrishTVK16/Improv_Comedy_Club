@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Improv Comedy Club | Visit Us</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Improv Club</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="bi bi-list"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Shows</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Train</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">Club</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Buzz</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contact.html">Visit</a></li>
+                </ul>
+                <div class="d-flex gap-2">
+                    <a href="login.html" class="btn btn-outline-custom btn-sm">Log In</a>
+                    <a href="register.html" class="btn btn-custom btn-sm">Sign Up</a>
+                    <button class="btn btn-link text-dark p-0 ms-2"><i class="bi bi-moon-stars-fill"></i></button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="py-5 mt-5 bg-primary-soft text-center">
+        <div class="container pt-5">
+            <h1 class="display-3 mb-3">Drop By & Say Hi</h1>
+            <p class="lead mx-auto" style="max-width: 700px;">Have questions? Want to book a private event? Or just want
+                to tell us a joke?</p>
+        </div>
+    </header>
+
+    <!-- Contact Info & Form -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-5">
+                    <h2 class="mb-4">Get in Touch</h2>
+                    <div class="d-flex mb-4">
+                        <div class="icon-box text-primary fs-3 me-3"><i class="bi bi-geo-alt-fill"></i></div>
+                        <div>
+                            <h5 class="mb-1">Location</h5>
+                            <p class="text-muted">123 Comedy Lane,<br>Laugh City, NY 10012</p>
+                        </div>
+                    </div>
+                    <div class="d-flex mb-4">
+                        <div class="icon-box text-primary fs-3 me-3"><i class="bi bi-envelope-fill"></i></div>
+                        <div>
+                            <h5 class="mb-1">Email</h5>
+                            <p class="text-muted">hello@improvclub.com</p>
+                        </div>
+                    </div>
+                    <div class="d-flex mb-4">
+                        <div class="icon-box text-primary fs-3 me-3"><i class="bi bi-telephone-fill"></i></div>
+                        <div>
+                            <h5 class="mb-1">Phone</h5>
+                            <p class="text-muted">+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <h5 class="mb-3">Box Office Hours</h5>
+                    <p class="text-muted mb-1">Mon - Fri: 12 PM - 10 PM</p>
+                    <p class="text-muted">Sat - Sun: 2 PM - 11 PM</p>
+                </div>
+                <div class="col-lg-7">
+                    <div class="card card-custom">
+                        <div class="card-body p-4">
+                            <h3 class="mb-4">Send us a Message</h3>
+                            <form>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="name" placeholder="Name">
+                                            <label for="name">Your Name</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="email" class="form-control" id="email" placeholder="Email">
+                                            <label for="email">Email Address</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-floating">
+                                            <select class="form-select" id="subject">
+                                                <option selected>General Inquiry</option>
+                                                <option value="1">Ticket Support</option>
+                                                <option value="2">Private Event</option>
+                                                <option value="3">Audition Info</option>
+                                            </select>
+                                            <label for="subject">Subject</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-floating">
+                                            <textarea class="form-control" placeholder="Message" id="message"
+                                                style="height: 150px"></textarea>
+                                            <label for="message">Your Message</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <button type="submit" class="btn btn-custom w-100">Send Message</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map -->
+    <section class="pb-5">
+        <div class="container-fluid px-0">
+            <div
+                style="height: 400px; background-color: var(--secondary); color: var(--light); display: flex; align-items: center; justify-content: center;">
+                <h3><i class="bi bi-map me-2"></i>Map Integration Placeholder</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <a href="#" class="navbar-brand mb-3 d-block">Improv Club</a>
+                    <p>Where comedy begins.</p>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <h5 class="h6 fw-bold">Company</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Classes</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <h5 class="h6 fw-bold">Support</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="h6 fw-bold">Stay in the Loop</h5>
+                    <form class="d-flex mt-3">
+                        <input type="email" class="form-control rounded-pill me-2" placeholder="Your email">
+                        <button type="submit" class="btn btn-custom rounded-circle" style="padding: 0.5rem 0.8rem;"><i
+                                class="bi bi-arrow-right"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="mb-0">&copy; 2026 Improv Comedy Club. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
