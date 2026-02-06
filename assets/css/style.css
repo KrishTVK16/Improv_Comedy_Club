@@ -1,0 +1,426 @@
+/* 
+   -------------------------------------------------------------------------------------------------------
+   IMPROV COMEDY CLUB - MAIN STYLESHEET
+   Design System: Modified Pattern 4 (Warm Earthy/Retro)
+   Fonts: Macondo (Headings/Accents), Outfit (Body)
+   -------------------------------------------------------------------------------------------------------
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Macondo&family=Outfit:wght@300;400;500;600;700&display=swap');
+
+:root {
+    /* Color Palette */
+    --primary: #EA580C;
+    /* Vibrant Orange - Buttons/Highlights */
+    --secondary: #431407;
+    /* Dark Brown - Headings/Text */
+    --tertiary: #85B57D;
+    /* Sage Green - Main Background */
+
+    /* Neutrals */
+    --light: #FFF7ED;
+    /* Soft Peach/White - Cards/Details */
+    --dark: #1F2937;
+    /* Deep Charcoal - Alt Text */
+    --white: #ffffff;
+
+    /* Spacing & Borders */
+    --border-radius: 12px;
+    --section-padding: 5rem 0;
+}
+
+/* -------------------------------------------------------------------------------------------------------
+   GLOBAL RESET & TYPOGRAPHY
+   ------------------------------------------------------------------------------------------------------- */
+body {
+    --section-padding: 5rem 0;
+}
+
+body.dark-mode {
+    --secondary: #FFF7ED;
+    /* Light text */
+    --tertiary: #111827;
+    /* Dark background - was Sage Green */
+    --light: #1F2937;
+    /* Dark cards - was Soft Peach */
+    --dark: #F3F4F6;
+    /* Light alt text */
+    --white: #1F2937;
+    --white: #1F2937;
+    /* Dark background for white elements */
+}
+
+body.dark-mode .text-muted {
+    color: #9ca3af !important;
+    /* Lighter gray for readability on dark backgrounds */
+}
+
+body.dark-mode .cta-section {
+    background-color: var(--tertiary);
+    /* Dark background */
+    color: var(--secondary);
+    /* Light text */
+}
+
+body {
+    background-color: var(--tertiary);
+    color: var(--secondary);
+    font-family: 'Outfit', sans-serif;
+    line-height: 1.7;
+    overflow-x: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Ensure text visibility in dark mode */
+body.dark-mode p,
+body.dark-mode li,
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6,
+body.dark-mode span {
+    color: var(--secondary) !important;
+}
+
+/* Fix navbar toggle visibility in dark mode */
+body.dark-mode .bi-moon-stars-fill,
+body.dark-mode .bi-sun-fill {
+    color: var(--secondary) !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.brand-logo,
+.nav-link,
+.btn-custom,
+.btn-outline-custom {
+    font-family: 'Macondo', cursive;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+/* -------------------------------------------------------------------------------------------------------
+   BUTTONS & UI ELEMENTS
+   ------------------------------------------------------------------------------------------------------- */
+.btn-custom {
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border: 2px solid var(--primary);
+    display: inline-block;
+}
+
+.btn-custom:hover {
+    background-color: transparent;
+    color: var(--primary);
+    border-color: var(--primary);
+    /* Maintain border visibility on hover */
+}
+
+.btn-outline-custom {
+    background-color: transparent;
+    color: var(--secondary);
+    border: 2px solid var(--secondary);
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+}
+
+.btn-outline-custom:hover {
+    background-color: var(--secondary);
+    color: var(--white);
+}
+
+/* -------------------------------------------------------------------------------------------------------
+   HEADER & NAVIGATION
+   ------------------------------------------------------------------------------------------------------- */
+.navbar {
+    padding: 1.2rem 0;
+    transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+    background-color: var(--light);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 0.8rem 0;
+}
+
+.navbar-brand {
+    font-size: 2rem;
+    color: var(--secondary) !important;
+    font-weight: 700;
+}
+
+.nav-link {
+    font-size: 1.25rem;
+    /* Larger for the Macondo font legibility */
+    color: var(--secondary) !important;
+    font-weight: 500;
+    margin: 0 0.8rem;
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--primary);
+    transition: width 0.3s ease;
+    border: none;
+    /* Removes Bootstrap dropdown arrow */
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+.navbar-toggler {
+    border: none;
+    font-size: 1.5rem;
+    color: var(--secondary);
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+/* -------------------------------------------------------------------------------------------------------
+   SECTIONS & SPACING
+   ------------------------------------------------------------------------------------------------------- */
+.section-padding {
+    padding: var(--section-padding);
+}
+
+.bg-light-custom {
+    background-color: var(--light);
+    /* Soft Peach/White cards */
+}
+
+.bg-primary-soft {
+    background-color: rgba(234, 88, 12, 0.1);
+}
+
+.card-custom {
+    background-color: var(--light);
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.card-custom:hover {
+    transform: translateY(-5px);
+}
+
+/* -------------------------------------------------------------------------------------------------------
+   FOOTER
+   ------------------------------------------------------------------------------------------------------- */
+footer {
+    background-color: var(--light);
+    color: var(--secondary);
+    /* Dark Brown text on Light */
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+}
+
+footer h5 {
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    font-size: 20px;
+}
+
+.footer-offset {
+    padding-top: 13px;
+}
+
+
+footer a {
+    color: var(--secondary);
+    opacity: 0.8;
+    display: block;
+    margin-bottom: 0.8rem;
+    font-family: 'Outfit', sans-serif;
+}
+
+footer a:hover {
+    color: var(--primary);
+    opacity: 1;
+    transform: translateX(5px);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(67, 20, 7, 0.1);
+    /* Dark border with low opacity */
+    margin-top: 3rem;
+    padding-top: 2rem;
+    text-align: center;
+    opacity: 0.6;
+    font-size: 0.9rem;
+}
+
+.cta-section {
+    background-color: var(--secondary);
+    color: var(--tertiary);
+    background-color: var(--secondary);
+    color: var(--tertiary);
+}
+
+/* FAQ & Newsletter specific styles for Home 2 (Dark Mode handling) */
+.faq-section {
+    background-color: var(--light);
+}
+
+.newsletter-section {
+    background-color: var(--secondary);
+    color: var(--white);
+}
+
+.newsletter-section .lead {
+    color: var(--tertiary);
+}
+
+body.dark-mode .faq-section {
+    background-color: var(--tertiary);
+    /* Dark background */
+    color: var(--secondary);
+    /* Light text */
+}
+
+body.dark-mode .accordion-item {
+    border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+body.dark-mode .accordion-button {
+    background-color: transparent;
+    color: var(--secondary);
+    /* Light text */
+    box-shadow: none;
+}
+
+body.dark-mode .accordion-button:not(.collapsed) {
+    color: var(--secondary);
+    /* Light text */
+    background-color: transparent;
+    box-shadow: none;
+}
+
+body.dark-mode .accordion-button::after {
+    filter: invert(1) brightness(200%);
+    /* Ensure icon is white/bright */
+}
+
+body.dark-mode .accordion-body {
+    color: var(--dark);
+    /* Light text for body */
+}
+
+body.dark-mode .newsletter-section {
+    background-color: var(--tertiary);
+    /* Remains dark (Sage/Black in dark mode) */
+    color: var(--secondary);
+}
+
+.core-values-section {
+    background-color: var(--secondary);
+    color: var(--light);
+}
+
+.core-values-section .h4,
+.core-values-section i {
+    color: var(--light);
+}
+
+.core-values-section .text-white-50 {
+    color: rgba(255, 247, 237, 0.7) !important;
+    /* Soft Peach with opacity */
+}
+
+body.dark-mode .core-values-section {
+    background-color: var(--tertiary);
+    /* Dark background */
+    color: var(--secondary);
+    /* Light text */
+}
+
+body.dark-mode .core-values-section .h4,
+body.dark-mode .core-values-section i {
+    color: var(--secondary);
+}
+
+body.dark-mode .core-values-section .text-white-50 {
+    color: rgba(255, 247, 237, 0.7) !important;
+}
+
+/* -------------------------------------------------------------------------------------------------------
+   HERO SECTION (Shared Base)
+   ------------------------------------------------------------------------------------------------------- */
+.hero-section {
+    padding: 8rem 0 5rem;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-title {
+    font-size: 4rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    color: var(--secondary);
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 2.5rem;
+    opacity: 0.9;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .navbar-collapse {
+        background-color: var(--light);
+        padding: 1rem;
+        border-radius: var(--border-radius);
+        margin-top: 1rem;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+}
+
+/* -------------------------------------------------------------------------------------------------------
+   BLOG / CUSTOM PILLS
+   ------------------------------------------------------------------------------------------------------- */
+.custom-pills .nav-link {
+    color: var(--secondary);
+    transition: all 0.3s ease;
+}
+
+.custom-pills .nav-link.active {
+    background-color: var(--secondary) !important;
+    color: var(--light) !important;
+}
+
+.custom-pills .nav-link:hover:not(.active) {
+    background-color: rgba(67, 20, 7, 0.1);
+    /* Light hover effect based on secondary color */
+}
