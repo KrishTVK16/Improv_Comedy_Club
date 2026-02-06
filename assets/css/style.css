@@ -453,5 +453,42 @@ body.dark-mode .core-values-section .text-white-50 {
 
 .custom-pills .nav-link:hover:not(.active) {
     background-color: rgba(67, 20, 7, 0.1);
-    /* Light hover effect based on secondary color */
+}
+
+/* -------------------------------------------------------------------------------------------------------
+   SCROLL TO TOP BUTTON
+   ------------------------------------------------------------------------------------------------------- */
+#scrollTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    font-size: 1.25rem;
+    border: none;
+    outline: none;
+    background-color: var(--primary);
+    color: white;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    opacity: 0.8;
+}
+
+#scrollTopBtn:hover {
+    background-color: var(--secondary);
+    transform: translateY(-3px);
+    opacity: 1;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    #scrollTopBtn {
+        bottom: 15px;
+        right: 15px;
+        padding: 8px 12px;
+        font-size: 1rem;
+    }
 }
