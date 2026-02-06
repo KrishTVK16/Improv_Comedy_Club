@@ -100,10 +100,8 @@ h6,
 .btn-custom,
 .btn-outline-custom {
     font-family: 'Outfit', sans-serif;
-    background-color: var(--tertiary);
     color: var(--secondary);
     line-height: 1.6;
-    overflow-x: hidden;
 }
 
 h1,
@@ -258,9 +256,8 @@ a {
    ------------------------------------------------------------------------------------------------------- */
 footer {
 
-    background-color: var(--secondary);
-    color: var(--tertiary);
-    /* Light Sage text on Dark Brown */
+    color: var(--secondary);
+    /* Dark Brown text */
 
     padding-top: 4rem;
     padding-bottom: 2rem;
@@ -279,7 +276,7 @@ footer h5 {
 
 
 footer a {
-    color: var(--tertiary);
+    color: var(--secondary);
     opacity: 0.8;
     display: block;
     margin-bottom: 0.8rem;
@@ -316,6 +313,10 @@ footer a:hover {
 
 .newsletter-section {
     background-color: var(--secondary);
+    color: var(--white);
+}
+
+.newsletter-section h2 {
     color: var(--white);
 }
 
@@ -369,6 +370,7 @@ body.dark-mode .newsletter-section {
     color: var(--light);
 }
 
+.core-values-section h2,
 .core-values-section .h4,
 .core-values-section i {
     color: var(--light);
@@ -386,6 +388,7 @@ body.dark-mode .core-values-section {
     /* Light text */
 }
 
+body.dark-mode .core-values-section h2,
 body.dark-mode .core-values-section .h4,
 body.dark-mode .core-values-section i {
     color: var(--secondary);

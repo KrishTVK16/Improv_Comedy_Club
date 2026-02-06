@@ -17,13 +17,41 @@
         /* Specific Styles for Home 2 */
         .hero-2 {
             text-align: center;
-
+            /* margin-top removed for full bleed overlay */
             background-color: var(--secondary);
             color: var(--tertiary);
             padding: 10rem 0 6rem;
             position: relative;
+
             overflow: hidden;
         }
+
+        body.dark-mode .hero-2 {
+            background-color: var(--tertiary);
+            color: var(--secondary);
+        }
+
+        body.dark-mode .hero-2 p {
+            color: var(--secondary) !important;
+        }
+
+        /* Navbar Overrides for Home 2 (Transparent on Dark Hero) */
+        .navbar:not(.scrolled) .navbar-brand,
+        .navbar:not(.scrolled) .nav-link,
+        .navbar:not(.scrolled) .navbar-toggler {
+            color: var(--light) !important;
+        }
+
+        .navbar:not(.scrolled) .btn-outline-custom {
+            color: var(--light);
+            border-color: var(--light);
+        }
+
+        .navbar:not(.scrolled) .btn-outline-custom:hover {
+            background-color: var(--light);
+            color: var(--secondary);
+        }
+
 
         .hero-2::before {
             content: '';
@@ -83,11 +111,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="services.html">Train</a>
                     </li>
-                    <li class="nav-item">
 
-
-                        <a class="nav-link" href="about.html">Club</a>
-                    </li>
                     <li class="nav-item">
 
                         <a class="nav-link" href="blog.html">Buzz</a>
@@ -111,7 +135,7 @@
 
     <!-- Hero Section (Centered & Light) -->
     <!-- Hero Section (Centered & Dark) -->
-    <section class="hero-2 mt-5" id="main-content">
+    <section class="hero-2" id="main-content">
         <div class="container position-relative">
             <span class="badge bg-primary mb-3">Est. 2005</span>
             <h1 class="display-1 hero-title text-white mb-4">Unscripted.<br>Uncensored.<br>Unforgettable.</h1>
@@ -138,12 +162,7 @@
                     <img src="https://media.istockphoto.com/id/597639502/photo/multi-ethnic-group-of-people-in-the-movie-theater.jpg?s=612x612&w=0&k=20&c=7c9y94ewBL7VzbHE1rYciCI8BJRpZc76WPlbncuJuHY="
                         alt="Multi-ethnic group of people in the movie theater" class="img-fluid rounded shadow-lg">
 
-                    <div class="card card-custom h-100 border-0 shadow-lg p-0 overflow-hidden">
-                        <div
-                            style="height: 100%; min-height: 400px; background-color: #d1d5db; display: flex; align-items: center; justify-content: center;">
-                            <p class="text-muted">Image: Crowd Laughing</p>
-                        </div>
-                    </div>
+
                 </div>
                 <div class="col-lg-5 offset-lg-1">
                     <h2 class="display-5 mb-4">Life is Serious Enough.</h2>
@@ -205,6 +224,8 @@
                             <p class="mt-4 fw-bold">- Sarah J.</p>
                         </div>
                     </div>
+                </div>
+                <div class="col-md-6 mb-4">
                     <div class="card card-custom h-100 text-center">
                         <div class="card-body">
                             <div class="mb-3 text-primary">
