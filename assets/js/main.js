@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Theme Toggle Logic
   const toggleBtns = document.querySelectorAll('.bi-moon-stars-fill').forEach(btn => {
+
     btn.parentElement.addEventListener('click', (e) => {
       e.preventDefault();
       document.body.classList.toggle('dark-mode');
@@ -36,4 +37,10 @@ document.addEventListener('DOMContentLoaded', function () {
       navbar.classList.remove('scrolled');
     }
   });
-});
+    btn.parentElement.addEventListener('click', () => {
+      // Simple visual toggle for demo purposes
+      // In a real app, this would swap CSS variables or classes on the body
+      alert("Theme toggle clicked! (Integration logic would go here to swap --tertiary and --secondary colors)");
+    });
+  });
+

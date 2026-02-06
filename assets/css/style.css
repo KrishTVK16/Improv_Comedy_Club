@@ -33,6 +33,7 @@
    GLOBAL RESET & TYPOGRAPHY
    ------------------------------------------------------------------------------------------------------- */
 body {
+
     --section-padding: 5rem 0;
 }
 
@@ -45,8 +46,6 @@ body.dark-mode {
     /* Dark cards - was Soft Peach */
     --dark: #F3F4F6;
     /* Light alt text */
-    --white: #1F2937;
-    --white: #1F2937;
     /* Dark background for white elements */
 }
 
@@ -100,6 +99,22 @@ h6,
 .nav-link,
 .btn-custom,
 .btn-outline-custom {
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--tertiary);
+    color: var(--secondary);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.brand-logo,
+.nav-link,
+.btn-custom {
     font-family: 'Macondo', cursive;
 }
 
@@ -126,8 +141,8 @@ a {
 .btn-custom:hover {
     background-color: transparent;
     color: var(--primary);
-    border-color: var(--primary);
-    /* Maintain border visibility on hover */
+
+
 }
 
 .btn-outline-custom {
@@ -152,11 +167,13 @@ a {
     transition: all 0.3s ease;
 }
 
+
 .navbar.scrolled {
     background-color: var(--light);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 0.8rem 0;
 }
+
 
 .navbar-brand {
     font-size: 2rem;
@@ -165,8 +182,10 @@ a {
 }
 
 .nav-link {
+
     font-size: 1.25rem;
     /* Larger for the Macondo font legibility */
+
     color: var(--secondary) !important;
     font-weight: 500;
     margin: 0 0.8rem;
@@ -182,6 +201,7 @@ a {
     left: 0;
     background-color: var(--primary);
     transition: width 0.3s ease;
+
     border: none;
     /* Removes Bootstrap dropdown arrow */
 }
@@ -211,6 +231,7 @@ a {
 .bg-light-custom {
     background-color: var(--light);
     /* Soft Peach/White cards */
+
 }
 
 .bg-primary-soft {
@@ -222,7 +243,9 @@ a {
     border: none;
     border-radius: var(--border-radius);
     padding: 2rem;
+
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+
     transition: transform 0.3s ease;
 }
 
@@ -234,9 +257,11 @@ a {
    FOOTER
    ------------------------------------------------------------------------------------------------------- */
 footer {
-    background-color: var(--light);
-    color: var(--secondary);
-    /* Dark Brown text on Light */
+
+    background-color: var(--secondary);
+    color: var(--tertiary);
+    /* Light Sage text on Dark Brown */
+
     padding-top: 4rem;
     padding-bottom: 2rem;
 }
@@ -244,6 +269,7 @@ footer {
 footer h5 {
     color: var(--primary);
     margin-bottom: 1.5rem;
+
     font-size: 20px;
 }
 
@@ -253,7 +279,7 @@ footer h5 {
 
 
 footer a {
-    color: var(--secondary);
+    color: var(--tertiary);
     opacity: 0.8;
     display: block;
     margin-bottom: 0.8rem;
@@ -267,8 +293,9 @@ footer a:hover {
 }
 
 .footer-bottom {
-    border-top: 1px solid rgba(67, 20, 7, 0.1);
-    /* Dark border with low opacity */
+
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+
     margin-top: 3rem;
     padding-top: 2rem;
     text-align: center;
@@ -276,9 +303,8 @@ footer a:hover {
     font-size: 0.9rem;
 }
 
+
 .cta-section {
-    background-color: var(--secondary);
-    color: var(--tertiary);
     background-color: var(--secondary);
     color: var(--tertiary);
 }
@@ -369,6 +395,7 @@ body.dark-mode .core-values-section .text-white-50 {
     color: rgba(255, 247, 237, 0.7) !important;
 }
 
+
 /* -------------------------------------------------------------------------------------------------------
    HERO SECTION (Shared Base)
    ------------------------------------------------------------------------------------------------------- */
@@ -403,6 +430,7 @@ body.dark-mode .core-values-section .text-white-50 {
         padding: 1rem;
         border-radius: var(--border-radius);
         margin-top: 1rem;
+
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     }
 }

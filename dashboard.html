@@ -184,12 +184,7 @@
             color: #431407 !important;
         }
 
-        .navbar-brand {
-            font-size: 2rem;
-            color: var(--secondary) !important;
-            font-weight: 700;
-            font-family: 'Macondo', cursive;
-        }
+
 
         @media (max-width: 992px) {
             .sidebar {
@@ -231,7 +226,8 @@
 <body>
 
     <!-- Mobile Toggle -->
-    <button class="btn btn-primary d-lg-none position-fixed top-0 end-0 m-3 z-3" id="sidebarToggle" style="background-color: #431407; border: none; padding: 10px 15px;">
+    <button class="btn btn-primary d-lg-none position-fixed top-0 end-0 m-3 z-3" id="sidebarToggle"
+        style="background-color: #431407; border: none; padding: 10px 15px;">
         <i class="bi bi-list" style="font-size: 1.5rem;"></i>
     </button>
 
@@ -270,7 +266,8 @@
             <div class="d-flex gap-2">
                 <a href="index.html" class="btn btn-outline-light btn-sm flex-fill">Logout</a>
                 <!-- Light/Dark Toggle -->
-                <button class="btn btn-link text-light p-0" id="themeToggle"><i class="bi bi-moon-stars-fill"></i></button>
+                <button class="btn btn-link text-light p-0" id="themeToggle"><i
+                        class="bi bi-moon-stars-fill"></i></button>
             </div>
         </div>
     </div>
@@ -491,7 +488,7 @@
 
         themeToggle.addEventListener('click', () => {
             body.classList.toggle('dark-mode');
-            
+
             if (body.classList.contains('dark-mode')) {
                 themeIcon.classList.remove('bi-moon-stars-fill');
                 themeIcon.classList.add('bi-sun-fill');
