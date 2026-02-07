@@ -38,8 +38,9 @@
         /* Navbar Overrides for Home 2 (Transparent on Dark Hero) */
         .navbar:not(.scrolled) .navbar-brand,
         .navbar:not(.scrolled) .nav-link,
-        .navbar:not(.scrolled) .navbar-toggler {
-            color: var(--light) !important;
+        .navbar:not(.scrolled) .navbar-toggler,
+        .navbar:not(.scrolled) .btn-link {
+            color: var(--white) !important;
         }
 
         .navbar:not(.scrolled) .btn-outline-custom {
@@ -126,7 +127,7 @@
 
                     <a href="login.html" class="btn btn-outline-custom btn-sm">Log In</a>
                     <a href="register.html" class="btn btn-custom btn-sm">Sign Up</a>
-                    <button class="btn btn-link text-dark p-0 ms-2"><i class="bi bi-moon-stars-fill"></i></button>
+                    <button class="btn btn-link p-0 ms-2"><i class="bi bi-moon-stars-fill"></i></button>
                 </div>
             </div>
         </div>
@@ -145,10 +146,11 @@
                 comedy. From underground open mics to world-famous headliners, we are the beating heart of the
                 scene.
             </p>
-            <div class="d-flex justify-content-center gap-3">
+            <div class="d-flex justify-content-center align-items-center gap-3">
                 <a href="index.html#schedule" class="btn btn-custom">See Calendar</a>
 
-                <a href="#how-it-works" class="btn btn-outline-light rounded-pill px-4">How It Works</a>
+                <a href="#how-it-works" class="btn btn-outline-light rounded-pill border-2 fw-semibold"
+                    style="padding: 0.75rem 1.5rem; letter-spacing: 0.5px;">How It Works</a>
 
             </div>
         </div>
