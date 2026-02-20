@@ -137,10 +137,9 @@ a {
 }
 
 .btn-custom:hover {
-    background-color: transparent;
-    color: var(--primary);
-
-
+    background-color: var(--secondary);
+    border-color: var(--secondary);
+    color: var(--white);
 }
 
 .btn-outline-custom {
@@ -153,8 +152,9 @@ a {
 }
 
 .btn-outline-custom:hover {
-    background-color: var(--secondary);
-    color: var(--white);
+    background-color: transparent;
+    color: var(--primary);
+    border-color: var(--primary);
 }
 
 /* -------------------------------------------------------------------------------------------------------
@@ -217,6 +217,25 @@ a {
 
 .navbar-toggler:focus {
     box-shadow: none;
+}
+
+/* Custom Dropdown Styling */
+.dropdown-item:hover,
+.dropdown-item.active {
+    background-color: var(--tertiary) !important;
+    color: var(--secondary) !important;
+}
+
+.dropdown-menu {
+    border-radius: var(--border-radius);
+    border: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    background-color: var(--light);
+}
+
+body.dark-mode .dropdown-menu {
+    background-color: var(--light);
+    /* Keep soft peach for contrast or match dark theme */
 }
 
 /* -------------------------------------------------------------------------------------------------------
@@ -490,5 +509,14 @@ body.dark-mode .core-values-section .text-white-50 {
         right: 15px;
         padding: 8px 12px;
         font-size: 1rem;
+    }
+
+    .border-md-end-none {
+        border-right: none !important;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+    }
+
+    body.dark-mode .border-md-end-none {
+        border-bottom-color: #4B5563 !important;
     }
 }

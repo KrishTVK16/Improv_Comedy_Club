@@ -61,6 +61,13 @@
             opacity: 1;
         }
 
+        .btn-outline-light:hover {
+            background-color: var(--white);
+            border-color: var(--white);
+            color: #85B57D !important;
+            /* Force sage green text */
+        }
+
         .nav-pills .nav-link i {
             margin-right: 10px;
             font-size: 1.2rem;
@@ -128,6 +135,13 @@
         body.dark-mode .nav-pills .nav-link.active {
             background-color: #EA580C;
             color: white !important;
+        }
+
+        body.dark-mode .btn-outline-light:hover {
+            background-color: var(--secondary);
+            border-color: var(--secondary);
+            color: #1F2937 !important;
+            /* Force dark background color for text */
         }
 
         body.dark-mode .border-secondary {
@@ -264,7 +278,8 @@
 
         <div class="mt-auto ps-3 pt-3 border-top border-secondary">
             <div class="d-flex align-items-center mb-3">
-                <div class="rounded-circle bg-primary me-2" style="width: 32px; height: 32px;"></div>
+                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=100&h=100&auto=format&fit=crop"
+                    alt="Admin" class="rounded-circle me-2" style="width: 32px; height: 32px; object-fit: cover;">
                 <small>Admin User</small>
             </div>
             <div class="d-flex gap-2">
@@ -317,76 +332,80 @@
                 <h4 class="mb-3">Recent Activity</h4>
                 <div class="card border-0 shadow-sm">
                     <div class="card-body p-0">
-                        <table class="table table-hover mb-0">
-                            <thead class="bg-light">
-                                <tr>
-                                    <th scope="col" class="ps-4">User</th>
-                                    <th scope="col">Action</th>
-                                    <th scope="col">Date</th>
-                                    <th scope="col">Status</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="ps-4">John Smith</td>
-                                    <td>Purchased 2x General Admission</td>
-                                    <td>Oct 24, 2026</td>
-                                    <td><span class="badge bg-success">Completed</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="ps-4">Sarah Connor</td>
-                                    <td>Registered for Improv 101</td>
-                                    <td>Oct 24, 2026</td>
-                                    <td><span class="badge bg-success">Completed</span></td>
-                                </tr>
-                                <tr>
-                                    <td class="ps-4">Mike Ross</td>
-                                    <td>Submitted Contact Form</td>
-                                    <td>Oct 23, 2026</td>
-                                    <td><span class="badge bg-warning text-dark">Pending</span></td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <div class="table-responsive">
+                            <table class="table table-hover mb-0">
+                                <thead class="bg-light">
+                                    <tr>
+                                        <th scope="col" class="ps-4">User</th>
+                                        <th scope="col">Action</th>
+                                        <th scope="col">Date</th>
+                                        <th scope="col">Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="ps-4">John Smith</td>
+                                        <td>Purchased 2x General Admission</td>
+                                        <td>Oct 24, 2026</td>
+                                        <td><span class="badge bg-success">Completed</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ps-4">Sarah Connor</td>
+                                        <td>Registered for Improv 101</td>
+                                        <td>Oct 24, 2026</td>
+                                        <td><span class="badge bg-success">Completed</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ps-4">Mike Ross</td>
+                                        <td>Submitted Contact Form</td>
+                                        <td>Oct 23, 2026</td>
+                                        <td><span class="badge bg-warning text-dark">Pending</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- Users Tab -->
             <div class="tab-pane fade" id="users" role="tabpanel">
-                <div class="d-flex justify-content-between align-items-center mb-4">
-                    <h2>User Management</h2>
+                <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-4">
+                    <h2 class="mb-0">User Management</h2>
                     <button class="btn btn-primary"><i class="bi bi-plus-lg"></i> Add User</button>
                 </div>
                 <div class="card border-0 shadow-sm">
                     <div class="card-body">
                         <input type="text" class="form-control mb-3" placeholder="Search users...">
-                        <table class="table table-striped">
-                            <thead>
-                                <tr>
-                                    <th>ID</th>
-                                    <th>Name</th>
-                                    <th>Email</th>
-                                    <th>Role</th>
-                                    <th>Actions</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>#1001</td>
-                                    <td>Alice Wonder</td>
-                                    <td>alice@example.com</td>
-                                    <td>Student</td>
-                                    <td><button class="btn btn-sm btn-outline-secondary">Edit</button></td>
-                                </tr>
-                                <tr>
-                                    <td>#1002</td>
-                                    <td>Bob Builder</td>
-                                    <td>bob@example.com</td>
-                                    <td>Member</td>
-                                    <td><button class="btn btn-sm btn-outline-secondary">Edit</button></td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                        <th>Role</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>#1001</td>
+                                        <td>Alice Wonder</td>
+                                        <td>alice@example.com</td>
+                                        <td>Student</td>
+                                        <td><button class="btn btn-sm btn-outline-secondary">Edit</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>#1002</td>
+                                        <td>Bob Builder</td>
+                                        <td>bob@example.com</td>
+                                        <td>Member</td>
+                                        <td><button class="btn btn-sm btn-outline-secondary">Edit</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -421,9 +440,9 @@
             <!-- Messages Tab -->
             <div class="tab-pane fade" id="messages" role="tabpanel">
                 <h2 class="mb-4">Inbox</h2>
-                <div class="row">
-                    <div class="col-md-4 border-end">
-                        <div class="list-group list-group-flush">
+                <div class="row g-4">
+                    <div class="col-md-4 border-end border-md-end-none">
+                        <div class="list-group list-group-flush mb-4 mb-md-0">
                             <a href="#" class="list-group-item list-group-item-action active">
                                 <div class="d-flex w-100 justify-content-between">
                                     <h6 class="mb-1">New Inquiry</h6>
@@ -444,7 +463,8 @@
                         <h5>Subject: Do you offer private coaching?</h5>
                         <p class="text-muted small mb-4">From: j.doe@email.com</p>
                         <p>Hi,</p>
-                        <p>I was wondering if any of your instructors offer 1-on-1 coaching for audition prep? I have a
+                        <p>I was wondering if any of your instructors offer 1-on-1 coaching for audition prep? I
+                            have a
                             big casting coming up next month.</p>
                         <p>Thanks,<br>Jane</p>
                         <hr>
