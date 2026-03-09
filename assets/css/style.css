@@ -285,8 +285,16 @@ footer {
 footer h5 {
     color: var(--primary);
     margin-bottom: 1.5rem;
-
     font-size: 20px;
+    text-shadow:
+        -1px -1px 0 var(--white),
+        1px -1px 0 var(--white),
+        -1px 1px 0 var(--white),
+        1px 1px 0 var(--white),
+        0px -1px 0 var(--white),
+        0px 1px 0 var(--white),
+        -1px 0px 0 var(--white),
+        1px 0px 0 var(--white);
 }
 
 .footer-offset {
