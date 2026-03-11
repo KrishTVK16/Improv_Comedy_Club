@@ -1,32 +1,39 @@
 /* 
    -------------------------------------------------------------------------------------------------------
    IMPROV COMEDY CLUB - MAIN STYLESHEET
-   Design System: Modified Pattern 4 (Warm Earthy/Retro)
-   Fonts: Macondo (Headings/Accents), Outfit (Body)
+   Design System: Modern Minimalist / Warm Earthy
+   Font: Outfit (All Text)
    -------------------------------------------------------------------------------------------------------
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Macondo&family=Outfit:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
 
 :root {
-    /* Color Palette */
+    /* Color Palette - Restricted to 3 Main Colors */
     --primary: #EA580C;
-    /* Vibrant Orange - Buttons/Highlights */
-    --secondary: #431407;
-    /* Dark Brown - Headings/Text */
-    --tertiary: #85B57D;
-    /* Sage Green - Main Background */
+    /* Vibrant Orange */
+    --secondary: #1F2937;
+    /* Deep Charcoal */
+    --light: #FFF7ED;
+    /* Soft Peach/White */
+    
+    /* Global Background/Text Overrides for Light Mode */
+    --bg-main: var(--light);
+    --text-main: var(--secondary);
 
     /* Neutrals */
-    --light: #FFF7ED;
-    /* Soft Peach/White - Cards/Details */
     --dark: #1F2937;
-    /* Deep Charcoal - Alt Text */
     --white: #ffffff;
 
     /* Spacing & Borders */
     --border-radius: 12px;
     --section-padding: 5rem 0;
+
+    /* Bootstrap Overrides */
+    --bs-primary: #EA580C;
+    --bs-primary-rgb: 234, 88, 12;
+    --bs-link-color: #EA580C;
+    --bs-link-hover-color: #1F2937;
 }
 
 /* -------------------------------------------------------------------------------------------------------
@@ -38,15 +45,40 @@ body {
 }
 
 body.dark-mode {
-    --secondary: #FFF7ED;
-    /* Light text */
-    --tertiary: #111827;
-    /* Dark background - was Sage Green */
-    --light: #1F2937;
-    /* Dark cards - was Soft Peach */
-    --dark: #F3F4F6;
-    /* Light alt text */
-    /* Dark background for white elements */
+    --secondary: #FFF7ED; /* Light text */
+    --bg-main: #1F2937;   /* Dark background */
+    --light: #374151;     /* Lighter Charcoal for cards */
+    --dark: #F3F4F6;      /* Light alt text */
+    
+    /* Bootstrap Overrides for Dark Mode */
+    --bs-primary: #EA580C;
+    --bs-primary-rgb: 234, 88, 12;
+    --bs-link-color: #EA580C;
+    --bs-link-hover-color: #FFF7ED;
+}
+
+body.dark-mode footer {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+body.dark-mode footer h5 {
+    color: var(--white);
+    text-shadow: none;
+}
+
+body.dark-mode footer a {
+    color: var(--white);
+    opacity: 0.9;
+}
+
+body.dark-mode footer a:hover {
+    color: var(--secondary);
+}
+
+body.dark-mode .footer-bottom {
+    border-top-color: rgba(255, 255, 255, 0.2);
+    color: var(--white);
 }
 
 body.dark-mode .text-muted {
@@ -55,14 +87,14 @@ body.dark-mode .text-muted {
 }
 
 body.dark-mode .cta-section {
-    background-color: var(--tertiary);
+    background-color: var(--bg-main);
     /* Dark background */
     color: var(--secondary);
     /* Light text */
 }
 
 body {
-    background-color: var(--tertiary);
+    background-color: var(--bg-main);
     color: var(--secondary);
     font-family: 'Outfit', sans-serif;
     line-height: 1.7;
@@ -113,32 +145,100 @@ h6,
 .brand-logo,
 .nav-link,
 .btn-custom {
-    font-family: 'Macondo', cursive;
+    font-family: 'Outfit', sans-serif;
 }
 
 a {
     text-decoration: none;
     color: inherit;
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+/* -------------------------------------------------------------------------------------------------------
+   GLASSMORPHISM & MODERN EFFECTS
+   ------------------------------------------------------------------------------------------------------- */
+.glass-card {
+    background: rgba(255, 247, 237, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+}
+
+body.dark-mode .glass-card {
+    background: rgba(31, 41, 55, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-nav {
+    background: rgba(255, 247, 237, 0.8) !important;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+body.dark-mode .glass-nav {
+    background: rgba(15, 23, 42, 0.8) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* -------------------------------------------------------------------------------------------------------
+   ANIMATIONS
+   ------------------------------------------------------------------------------------------------------- */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+@keyframes glow {
+    0% { box-shadow: 0 0 5px rgba(234, 88, 12, 0.2); }
+    50% { box-shadow: 0 0 20px rgba(234, 88, 12, 0.5); }
+    100% { box-shadow: 0 0 5px rgba(234, 88, 12, 0.2); }
+}
+
+.animate-up {
+    animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
+
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.3s; }
 
 /* -------------------------------------------------------------------------------------------------------
    BUTTONS & UI ELEMENTS
    ------------------------------------------------------------------------------------------------------- */
 .btn-custom {
-    background-color: var(--primary);
+    background: linear-gradient(135deg, var(--primary), #fb923c);
     color: var(--white);
-    padding: 0.75rem 1.5rem;
+    padding: 0.8rem 2rem;
     border-radius: 50px;
     font-weight: 600;
     letter-spacing: 0.5px;
-    border: 2px solid var(--primary);
+    border: none;
     display: inline-block;
+    box-shadow: 0 4px 15px rgba(234, 88, 12, 0.3);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn-custom:hover {
-    background-color: var(--secondary);
-    border-color: var(--secondary);
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(234, 88, 12, 0.4);
     color: var(--white);
 }
 
@@ -146,15 +246,16 @@ a {
     background-color: transparent;
     color: var(--secondary);
     border: 2px solid var(--secondary);
-    padding: 0.75rem 1.5rem;
+    padding: 0.8rem 2rem;
     border-radius: 50px;
     font-weight: 600;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn-outline-custom:hover {
-    background-color: transparent;
-    color: var(--primary);
-    border-color: var(--primary);
+    background-color: var(--secondary);
+    color: var(--white);
+    transform: translateY(-3px);
 }
 
 /* -------------------------------------------------------------------------------------------------------
@@ -182,7 +283,7 @@ a {
 .nav-link {
 
     font-size: 1.25rem;
-    /* Larger for the Macondo font legibility */
+    /* Larger for legibility */
 
     color: var(--secondary) !important;
     font-weight: 500;
@@ -222,8 +323,8 @@ a {
 /* Custom Dropdown Styling */
 .dropdown-item:hover,
 .dropdown-item.active {
-    background-color: var(--tertiary) !important;
-    color: var(--secondary) !important;
+    background-color: var(--primary) !important;
+    color: var(--white) !important;
 }
 
 .dropdown-menu {
@@ -235,7 +336,16 @@ a {
 
 body.dark-mode .dropdown-menu {
     background-color: var(--light);
-    /* Keep soft peach for contrast or match dark theme */
+}
+
+body.dark-mode .dropdown-item {
+    color: var(--secondary) !important;
+}
+
+body.dark-mode .dropdown-item:hover,
+body.dark-mode .dropdown-item.active {
+    background-color: var(--primary) !important;
+    color: var(--white) !important;
 }
 
 /* -------------------------------------------------------------------------------------------------------
@@ -257,17 +367,17 @@ body.dark-mode .dropdown-menu {
 
 .card-custom {
     background-color: var(--light);
-    border: none;
-    border-radius: var(--border-radius);
-    padding: 2rem;
-
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-
-    transition: transform 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.05);
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.03);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .card-custom:hover {
-    transform: translateY(-5px);
+    transform: translateY(-12px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.08);
+    border-color: var(--primary);
 }
 
 /* -------------------------------------------------------------------------------------------------------
@@ -330,7 +440,7 @@ footer a:hover {
 
 .cta-section {
     background-color: var(--secondary);
-    color: var(--tertiary);
+    color: var(--light);
 }
 
 /* FAQ & Newsletter specific styles for Home 2 (Dark Mode handling) */
@@ -348,14 +458,12 @@ footer a:hover {
 }
 
 .newsletter-section .lead {
-    color: var(--tertiary);
+    color: var(--light);
 }
 
 body.dark-mode .faq-section {
-    background-color: var(--tertiary);
-    /* Dark background */
+    background-color: var(--bg-main);
     color: var(--secondary);
-    /* Light text */
 }
 
 body.dark-mode .accordion-item {
@@ -387,8 +495,12 @@ body.dark-mode .accordion-body {
 }
 
 body.dark-mode .newsletter-section {
-    background-color: var(--tertiary);
-    /* Remains dark (Sage/Black in dark mode) */
+    background-color: var(--light);
+    color: var(--secondary);
+}
+
+body.dark-mode .newsletter-section h2,
+body.dark-mode .newsletter-section .lead {
     color: var(--secondary);
 }
 
@@ -409,10 +521,8 @@ body.dark-mode .newsletter-section {
 }
 
 body.dark-mode .core-values-section {
-    background-color: var(--tertiary);
-    /* Dark background */
+    background-color: var(--light);
     color: var(--secondary);
-    /* Light text */
 }
 
 body.dark-mode .core-values-section h2,
@@ -437,10 +547,30 @@ body.dark-mode .core-values-section .text-white-50 {
 }
 
 .hero-title {
-    font-size: 4rem;
+    font-size: 4.5rem;
+    font-weight: 800;
     line-height: 1.1;
     margin-bottom: 1.5rem;
     color: var(--secondary);
+    letter-spacing: -0.02em;
+}
+
+.hero-title span {
+    display: inline-block;
+    position: relative;
+}
+
+.hero-title span::after {
+    content: "";
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    height: 12px;
+    background: var(--primary);
+    opacity: 0.2;
+    z-index: -1;
+    border-radius: 4px;
 }
 
 .hero-subtitle {

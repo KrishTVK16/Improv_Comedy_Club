@@ -16,7 +16,7 @@
     <style>
         .sidebar {
             height: 100vh;
-            background-color: #85B57D;
+            background-color: var(--secondary);
             color: white !important;
             position: fixed;
             top: 0;
@@ -24,7 +24,7 @@
             width: 250px;
             padding: 2rem 1rem;
             z-index: 99999;
-            border-right: 2px solid #EA580C;
+            border-right: 2px solid var(--primary);
         }
 
         .sidebar * {
@@ -39,7 +39,7 @@
             margin-left: 250px;
             padding: 2rem;
             min-height: 100vh;
-            background-color: #F8F9FA;
+            background-color: var(--light);
         }
 
         .nav-pills .nav-link {
@@ -64,8 +64,8 @@
         .btn-outline-light:hover {
             background-color: var(--white);
             border-color: var(--white);
-            color: #85B57D !important;
-            /* Force sage green text */
+            color: var(--secondary) !important;
+            /* Force dark charcoal text */
         }
 
         .nav-pills .nav-link i {
@@ -221,7 +221,7 @@
             }
 
             #sidebarToggle {
-                background-color: #431407 !important;
+                background-color: var(--primary) !important;
                 border: none !important;
                 padding: 12px 16px !important;
                 border-radius: 8px !important;
@@ -245,13 +245,13 @@
 
     <!-- Mobile Toggle -->
     <button class="btn btn-primary d-lg-none position-fixed top-0 end-0 m-3 z-3" id="sidebarToggle"
-        style="background-color: #431407; border: none; padding: 10px 15px;">
+        style="background-color: var(--primary); border: none; padding: 10px 15px;">
         <i class="bi bi-list" style="font-size: 1.5rem;"></i>
     </button>
 
     <!-- Sidebar -->
-    <div class="sidebar d-flex flex-column" id="sidebar">
-        <a class="navbar-brand" style="font-family: 'Outfit', sans-serif;" href="index.html">Improv Club</a>
+    <div class="sidebar d-flex flex-column animate-up" id="sidebar">
+        <a class="navbar-brand animate-up delay-1" href="index.html" style="font-family: 'Outfit', sans-serif;">Improv Club</a>
 
         <ul class="nav nav-pills flex-column mb-auto" id="adminTabs" role="tablist">
             <li class="nav-item">
@@ -297,31 +297,31 @@
 
             <!-- Dashboard Tab -->
             <div class="tab-pane fade show active" id="dashboard" role="tabpanel">
-                <h2 class="mb-4">Overview</h2>
+                <h2 class="mb-4 animate-up">Overview</h2>
                 <div class="row g-4 mb-5">
-                    <div class="col-md-3">
-                        <div class="stat-card">
+                    <div class="col-md-3 animate-up delay-1">
+                        <div class="stat-card glass-card">
                             <p class="text-muted small fw-bold text-uppercase">Total Sales</p>
                             <h3 class="mb-0">$12,450</h3>
                             <small class="text-success"><i class="bi bi-arrow-up"></i> 15% this week</small>
                         </div>
                     </div>
-                    <div class="col-md-3">
-                        <div class="stat-card">
+                    <div class="col-md-3 animate-up delay-2">
+                        <div class="stat-card glass-card">
                             <p class="text-muted small fw-bold text-uppercase">Tickets Sold</p>
                             <h3 class="mb-0">845</h3>
                             <small class="text-success"><i class="bi bi-arrow-up"></i> 5% this week</small>
                         </div>
                     </div>
-                    <div class="col-md-3">
-                        <div class="stat-card">
+                    <div class="col-md-3 animate-up delay-3">
+                        <div class="stat-card glass-card">
                             <p class="text-muted small fw-bold text-uppercase">New Students</p>
                             <h3 class="mb-0">32</h3>
                             <small class="text-primary">New enrollment period</small>
                         </div>
                     </div>
-                    <div class="col-md-3">
-                        <div class="stat-card">
+                    <div class="col-md-3 animate-up delay-1">
+                        <div class="stat-card glass-card">
                             <p class="text-muted small fw-bold text-uppercase">Pending Msgs</p>
                             <h3 class="mb-0">12</h3>
                             <small class="text-warning">Requires attention</small>
